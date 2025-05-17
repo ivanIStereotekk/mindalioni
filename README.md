@@ -1,0 +1,26 @@
+## Dokerized App - web site for the social project.
+## Контейнеризированное приложение веб сайт социального проекта.
+
+> [!NOTE]
+> Приложение в процессе разработки.
+
+
+## Running Locally
+
+Create a `.env` file similar to [`.env.example`](https://github.com/chronark/chronark.com/blob/main/.env.example).
+
+Then install dependencies and run the development server:
+```sh-session
+pnpm install
+pnpm dev
+```
+
+---
+
+<div align="center">
+    <a href="https://ivanistereotekk.github.io/"><h1 align="center">IvanStereotekk-github-pages</h1></a>
+
+My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/)
+</div>
+
+<br/>
