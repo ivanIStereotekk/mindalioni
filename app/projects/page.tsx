@@ -9,7 +9,7 @@ import { Eye } from "lucide-react";
 
 const redis = Redis.fromEnv();
 
-export const revalidate = 60;
+export const revalidate = 60; 
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
@@ -20,9 +20,11 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "unkey")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  // MDX Filenames should be the same as the project.slug
+
+  const featured = allProjects.find((project) => project.slug === "superb-one")!; // Вынести в переменные окружения !!!
+  const top2 = allProjects.find((project) => project.slug === "superb-two")!; // так же !!!
+  const top3 = allProjects.find((project) => project.slug === "superb-three")!; // То же... 
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
