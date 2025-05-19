@@ -3,6 +3,8 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import { ThemeProvider } from "./components/theme-provider"
+import { ModeToggle } from "./components/theme-toggle";
 
 export const metadata: Metadata = {
   title: {
@@ -61,7 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    // added ThemeProvider
+    <html lang="en" suppressHydrationWarning className={[inter.variable, calSans.variable].join(" ") }>
       <head>
         <Analytics />
       </head>
@@ -69,7 +72,16 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <ModeToggle/>
+            {children}
+          </ThemeProvider>
+          {/* {children} */}
       </body>
     </html>
   );

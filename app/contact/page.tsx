@@ -1,28 +1,32 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Twitter, Send } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
-	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
-		label: "Twitter",
-		handle: "@stereotekk",
-	},
-	{
-		icon: <Mail size={20} />,
-		href: "mailto:ivan.stereotekk@gmail.com",
-		label: "Email",
-		handle: "divan.stereotekk@gmail.com",
-	},
-	{
-		icon: <Github size={20} />,
-		href: "https://ivanistereotekk.github.io/",
-		label: "Github",
-		handle: "Ivan Stereotekk",
-	},
+    {
+        icon: <Twitter size={20} />,
+        href: "https://twitter.com/someuser",
+        label: "Twitter",
+        handle: "Twitter",
+        text: "The Georgian scripts are the three writing systems used to write the Georgian language: ",
+    },
+    {
+        icon: <Mail size={20}/>,
+        href: "mailto:test@gmail.com",
+        label: "Email",
+        handle: "email",
+        text: "The Georgian scripts are the three writing systems used to write the Georgian language: Asomtavruli, Nuskhuri and Mkhedruli.",
+    },
+    {
+        icon: <Send size={20} />,
+        href: "http://t.me/@someuser",
+        label: "Telegram",
+        handle: "Telegram",
+        text: "The Georgian scripts are the three writing systems used to write the Georgian language: ",
+    },
+
 ];
 
 export default function Example() {

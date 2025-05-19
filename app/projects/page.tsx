@@ -20,11 +20,15 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
+
+
+
+
   // MDX Filenames should be the same as the project.slug
 
-  const featured = allProjects.find((project) => project.slug === "superb-one")!; // Вынести в переменные окружения !!!
-  const top2 = allProjects.find((project) => project.slug === "superb-two")!; // так же !!!
-  const top3 = allProjects.find((project) => project.slug === "superb-three")!; // То же... 
+  const featured = allProjects.find((project) => project.slug === process.env.PROJECTS_SLUG_ONE)!; // Вынести в переменные окружения !!!
+  const top2 = allProjects.find((project) => project.slug === process.env.PROJECTS_SLUG_TWO)!; // так же !!!
+  const top3 = allProjects.find((project) => project.slug === process.env.PROJECTS_SLUG_THREE)!; // То же... 
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
