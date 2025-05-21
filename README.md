@@ -1,8 +1,8 @@
-## Dokerized App - web site for the social project.
-## Контейнеризированное приложение веб сайт социального проекта.
+## Dokerized App - web site: mindalioni.
+.
 
 > [!NOTE]
-> Приложение в процессе разработки.
+> Still developing this site.
 
 
 ## Running Locally
@@ -30,7 +30,7 @@ pnpm dev
 <div align="center">
     <a href="https://ivanistereotekk.github.io/"><h1 align="center">IvanStereotekk-github-pages</h1></a>
 
-My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/)
+Tecnological stack is: [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/)
 </div>
 
 <br/>
