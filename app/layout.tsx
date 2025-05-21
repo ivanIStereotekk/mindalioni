@@ -6,21 +6,26 @@ import { Analytics } from "./components/analytics";
 import { ThemeProvider } from "./components/theme-provider"
 import { ModeToggle } from "./components/theme-toggle";
 
+
+
+
+
+
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Geopolis",
+    template: "Geopolis",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Outline Project of a Technopolis",
   openGraph: {
-    title: "chronark.com",
+    title: "mindalioni.com",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "Outline Project of a Technopolis",
+    url: "https://mindalioni.com",
+    siteName: "Mindalioni",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "***",
         width: 1920,
         height: 1080,
       },
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Mindalioni",
     card: "summary_large_image",
   },
   icons: {
@@ -72,7 +77,7 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
@@ -80,8 +85,10 @@ export default function RootLayout({
           >
             <ModeToggle/>
             {children}
-          </ThemeProvider>
-          {/* {children} */}
+          </ThemeProvider> */}
+          {children}
+
+
       </body>
     </html>
   );

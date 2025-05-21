@@ -1,16 +1,18 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import SVGComponent from "./components/svg-cluster";
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
+  { name: "Project", href: "/project" },
   { name: "Contacts", href: "/contact" },
-  {name: "Education", href: "/education" }
+  // {name: "Education", href: "/forum" }
 ];
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      {/* <SVGComponent/> */}
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
