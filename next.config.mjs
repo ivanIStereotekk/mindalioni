@@ -13,12 +13,12 @@ export default withContentlayer(nextConfig);
 
 
 
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+// const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
-module.exports = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: isGitHubPages ? '/mindalioni' : '',
-  assetPrefix: isGitHubPages ? '/mindalioni/' : '',
-};
+// module.exports = {
+//   output: 'export',
+//   trailingSlash: true,
+//   basePath: isGitHubPages ? '/mindalioni' : '',
+//   assetPrefix: isGitHubPages ? '/mindalioni/' : '',
+// };
 
