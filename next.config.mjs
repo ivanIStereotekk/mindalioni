@@ -10,3 +10,15 @@ const nextConfig = {
 };
 
 export default withContentlayer(nextConfig);
+
+
+
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
+module.exports = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: isGitHubPages ? '/mindalioni' : '',
+  assetPrefix: isGitHubPages ? '/mindalioni/' : '',
+};
+
