@@ -17,6 +17,8 @@ pnpm dev
 
 ---
 
+
+
 > [!WARNING]
 >This project serves solely to demonstrate development capabilities. 
 > The content and messages conveyed through the texts and posts on this website do not reflect the developer’s personal views or ideology. 
