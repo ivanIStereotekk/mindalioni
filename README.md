@@ -11,13 +11,13 @@
 
 ## Running Locally
 
-Create a `.env.local` file similar to [`.env.example`].
+Create a `.env.local` file similar to `.env.example`
 
-`bash
+```bash  
 PINECONE_API_KEY='your-api-secret-key'
 PINECONE_ASSISTANT_NAME='your-assistant-name'
 
-`
+```
 
 Then install dependencies and run the development server:
 ```sh-session
