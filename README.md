@@ -11,7 +11,7 @@
 
 ## Running Locally
 
-Create a `.env.local` file similar to `.env.example`
+Create a `.env.local` file similar to example below:
 
 ```bash  
 PINECONE_API_KEY='your-api-secret-key'
@@ -23,6 +23,7 @@ Then install dependencies and run the development server:
 ```sh-session
 npm install
 npm dev
+
 ```
 
 ---
