@@ -27,7 +27,6 @@ export default function ChatPage() {
 
       const data = await res.json()
       const parsedData = data.response;
-      console.log(JSON.stringify(data.response) + ' +++++ P A R S E D D A T A');
       const assistantMessage = {
         role: 'assistant',
         content: JSON.stringify(parsedData),
@@ -42,15 +41,14 @@ export default function ChatPage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto p-4 flex flex-col min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Ask Question</h1>
+    <main className="max-w-2xl mx-auto flex flex-col min-h-80 min-w-full">
+      <h2 className="text-1xl mb-4">Ask to AI Assistant:</h2>
 
       {/* messages list */}
-      <div className="flex-grow overflow-y-auto border rounded-md p-4 mb-4 bg-white">
+      <div className="flex-grow overflow-y-auto border rounded-md p-1 mb-4 ">
         <MessageList messages={messages} />
       </div>
 
-      {/* Форма ввода */}
       <MessageInput onSend={sendMessage} loading={loading} />
     </main>
   )

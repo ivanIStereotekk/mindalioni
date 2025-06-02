@@ -10,7 +10,7 @@ interface Message {
           <div
             key={i}
             className={`p-3 rounded-md ${
-              msg.role === 'Guest' ? 'bg-gray-400 text-right' : 'bg-blue-400 text-left'
+              msg.role === 'assistant' ? 'text-right' : 'text-left outlined bg-slate-200 dark:bg-slate-800 '
             }`}
           >
             {msg.content}

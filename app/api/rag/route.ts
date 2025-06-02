@@ -29,14 +29,16 @@ export async function POST(req: Request) {
       );
     }
 
-    console.log('Generating text with prompt:', prompt);
     try {
       const chatResp = await assistant.chat({
         messages: [{ role: 'user', content: prompt }],
       });
-      console.log('Generated text:', chatResp);
-      const content = chatResp?.message?.content || "";
-      return Response.json({ response: content });
+ 
+      const contentText = chatResp?.message?.content || "";
+      // clean text
+      // const finishedText = JSON.parse(cleanText)
+      console.log(typeof contentText + "     <<< >>>>")
+      return Response.json({ response: contentText || "wrong data" });
     } catch (openaiError) {
       console.error('Pinecone API error:', {
         error: openaiError,
